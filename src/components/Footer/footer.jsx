@@ -93,29 +93,67 @@ function Footer() {
 						<h3>Quick Links</h3>
 						<ul ref={listRef} className="flex  flex-col gap-1 ">
 							<a href="/">
-								<li className="text-sm cursor-pointer font-bold hover:text-green-400  hover:underline underline-offset-16 ">
+								<li className="text-sm cursor-pointer font-bold hover:text-green-400  hover:underline   ">
 									Home
 								</li>
 							</a>
 							<a href="/about">
-								<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
+								<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline  ">
 									About
 								</li>
 							</a>
-							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
+							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline  ">
 								Privacy
 							</li>
-							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
+							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline  ">
 								Developer
 							</li>
-							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
+							<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline  ">
 								Features
 							</li>
 						</ul>
 					</div>
 				</div>
+				<div>
+					<div className="flex flex-col justify-center items-center text-white ml-3">
+						<h3>Resources</h3>
+						<ul ref={listRef} className="flex  flex-col gap-1 ">
+							<li className="text-sm cursor-pointer font-bold  hover:text-gray-400 ">
+								Safety
+							</li>
+							<li className="text-sm cursor-pointer font-bold  hover:text-gray-400 ">
+								Guidelines
+							</li>
+							<li className="text-sm cursor-pointer font-bold hover:text-gray-400  ">
+								Support
+							</li>
+							<li className="text-sm cursor-pointer font-bold hover:text-gray-400  ">
+								FAQ
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<div className="flex flex-col justify-center items-start text-white ml-3">
+						<h3>Legal</h3>
+						<ul ref={listRef} className="flex  flex-col gap-1 ">
+							<li className="text-sm cursor-pointer font-bold hover:text-gray-400   ">
+								Privacy Policy
+							</li>
+							<li className="text-sm cursor-pointer font-bold hover:text-gray-400  ">
+								Terms of Service
+							</li>
+							<li className="text-sm cursor-pointer font-bold hover:text-gray-400  ">
+								Cummunity Rules
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<p>&copy; Wisper. All rights reserved.</p>
+
+			<div>
+				<p>&copy; Wisper. All rights reserved.</p>
+			</div>
 		</div>
 	);
 }
