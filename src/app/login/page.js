@@ -1,9 +1,9 @@
-import HomePage from "@/components/home/homemain";
+import LoginPage from "./loginmain";
 
 export default function Home() {
 	return (
 		<div className="h-full w-full bg-black">
-			<HomePage />
+			<LoginPage />
 		</div>
 	);
 }
