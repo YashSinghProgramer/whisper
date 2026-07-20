@@ -10,6 +10,7 @@ function Sidebar() {
 	const router = useRouter();
 
 	const logout = () => {
+		s;
 		localStorage.removeItem("token");
 	};
 
@@ -23,11 +24,14 @@ function Sidebar() {
 			}
 
 			try {
-				const response = await axios.get("http://localhost:3500/profile", {
-					headers: {
-						Authorization: `Bearer ${token}`,
+				const response = await axios.get(
+					"whisper/src/app/main/login/login.jsx/profile",
+					{
+						headers: {
+							Authorization: `Bearer ${token}`,
+						},
 					},
-				});
+				);
 
 				// Console log karke dekhein response structure kya hai
 				console.log("Backend Response:", response.data);
