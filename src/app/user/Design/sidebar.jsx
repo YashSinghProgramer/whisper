@@ -25,7 +25,7 @@ function Sidebar() {
 
 			try {
 				const response = await axios.get(
-					"whisper/src/app/main/login/login.jsx/profile",
+					"https://wishpringroom.onrender.com/profile",
 					{
 						headers: {
 							Authorization: `Bearer ${token}`,
