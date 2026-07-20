@@ -2,7 +2,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import Joinbutton from "./Joinbutton";
-import About from "../../app/about/About";
+import About from "../about/About";
 
 function Navbar() {
 	const logoRef = useRef(null);
@@ -46,12 +46,12 @@ function Navbar() {
 
 			<div>
 				<ul ref={listRef} className="flex gap-8">
-					<a href="/">
+					<a href="/main/home">
 						<li className="text-sm cursor-pointer font-bold hover:text-green-400  hover:underline underline-offset-16 ">
 							Home
 						</li>
 					</a>
-					<a href="/about">
+					<a href="/main/about">
 						<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
 							About
 						</li>
@@ -65,6 +65,11 @@ function Navbar() {
 					<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
 						Features
 					</li>
+					<a href="/user">
+						<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline underline-offset-16">
+							Profile
+						</li>
+					</a>
 				</ul>
 			</div>
 			<Joinbutton />

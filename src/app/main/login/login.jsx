@@ -45,14 +45,10 @@ function Login() {
 			if (!response.ok) {
 				throw new Error(data.message || "Something went wrong!");
 			}
-
-			// Success: JWT Token aur User Details ko localStorage mein save karein
 			localStorage.setItem("token", data.token);
 			localStorage.setItem("user", JSON.stringify(data.user));
 
-			// Yahan aap user ko dashboard ya home page par redirect kar sakte hain
-			// window.location.href = "/dashboard";
-			router.push("/deshboard");
+			router.push("/user");
 		} catch (err) {
 			setError(err.message);
 		} finally {
@@ -117,7 +113,7 @@ function Login() {
 						)}
 					</button>
 				</form>
-				<a href="/createaccount">
+				<a href="/main/createaccount">
 					<button className="text-white rounded-xl mt-4 h-12 w-100 p-5 cursor-pointer gap-2 mb-2 flex justify-center items-center border-gray-700 border-2">
 						<img
 							src="https://img.icons8.com/?size=100&id=60023&format=png&color=00ff40"

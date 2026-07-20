@@ -92,12 +92,12 @@ function Footer() {
 					<div className="flex flex-col justify-center items-center text-white ml-3">
 						<h3>Quick Links</h3>
 						<ul ref={listRef} className="flex  flex-col gap-1 ">
-							<a href="/">
+							<a href="/main/home">
 								<li className="text-sm cursor-pointer font-bold hover:text-green-400  hover:underline   ">
 									Home
 								</li>
 							</a>
-							<a href="/about">
+							<a href="/main/about">
 								<li className="text-sm cursor-pointer font-bold hover:text-green-400 hover:underline  ">
 									About
 								</li>

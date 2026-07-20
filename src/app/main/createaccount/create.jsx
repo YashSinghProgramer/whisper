@@ -84,7 +84,7 @@ function Login() {
 				throw new Error(data.message || "Signup failed!");
 			}
 
-			window.location.href = "/login";
+			window.location.href = "/main/login";
 		} catch (err) {
 			setError(err.message);
 		} finally {
@@ -194,7 +194,7 @@ function Login() {
 					</button>
 				</form>
 
-				<a href="/login">
+				<a href="/main/login">
 					<button className="text-white rounded-xl mt-6 h-12 w-100 p-5 cursor-pointer gap-2 flex justify-center items-center border-gray-700 border-2">
 						<img
 							src="https://img.icons8.com/?size=100&id=60023&format=png&color=00ff40"
