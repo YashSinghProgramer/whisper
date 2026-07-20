@@ -81,7 +81,6 @@ function Login() {
 					</p>
 				</div>
 
-				{/* 3. Error Message Alert */}
 				{error && (
 					<div className="text-red-500 bg-red-500/10 border border-red-500/30 px-4 py-2 rounded-xl w-100 text-center text-sm mb-2">
 						{error}
