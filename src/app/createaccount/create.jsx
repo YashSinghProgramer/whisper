@@ -84,7 +84,6 @@ function Login() {
 				throw new Error(data.message || "Signup failed!");
 			}
 
-			alert("Account created successfully! Please login now.");
 			window.location.href = "/login";
 		} catch (err) {
 			setError(err.message);

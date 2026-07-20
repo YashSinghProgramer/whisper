@@ -54,8 +54,6 @@ function Login() {
 			localStorage.setItem("token", data.token);
 			localStorage.setItem("user", JSON.stringify(data.user));
 
-			alert("Login Successful! 🎉");
-
 			// Yahan aap user ko dashboard ya home page par redirect kar sakte hain
 			// window.location.href = "/dashboard";
 		} catch (err) {
