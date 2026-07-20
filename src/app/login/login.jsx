@@ -3,15 +3,13 @@ import React, { useState } from "react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import Leftside from "@/components/Design/leftside";
-
+import { useRouter } from "next/navigation";
 function Login() {
-	// 1. Username, Password aur Error ke liye states
 	const [username, setUsername] = useState("");
 	const [Password, setPassword] = useState("");
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
-
-	// GSAP Animation Ref
+	const router = useRouter();
 	const loginRef = useRef();
 
 	useEffect(() => {
@@ -28,8 +26,6 @@ function Login() {
 			},
 		);
 	}, []);
-
-	// 2. API Call Function
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		setError("");
@@ -56,6 +52,7 @@ function Login() {
 
 			// Yahan aap user ko dashboard ya home page par redirect kar sakte hain
 			// window.location.href = "/dashboard";
+			router.push("/deshboard");
 		} catch (err) {
 			setError(err.message);
 		} finally {
@@ -105,7 +102,7 @@ function Login() {
 						onChange={(e) => setPassword(e.target.value)}
 						required
 						className="bg-gray-800 text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 mt-4 h-12 w-100 p-3 rounded-2xl mb-1"
-					/>
+					/>{" "}
 					<button
 						type="submit"
 						disabled={loading}
