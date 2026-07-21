@@ -1,14 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-
+import gsap from "gsap";
 function Sidebar() {
 	const [username, setUsername] = useState("");
 	const [userProfile, setUserProfile] = useState("");
 	const [loading, setLoading] = useState(true);
 	const router = useRouter();
-
+	const sidebarRef = useRef(null);
+	const listRef = useRef(null);
 	const logout = () => {
 		s;
 		localStorage.removeItem("token");
@@ -34,7 +35,7 @@ function Sidebar() {
 				);
 
 				// Console log karke dekhein response structure kya hai
-				console.log("Backend Response:", response.data);
+				
 
 				if (response.data && response.data.user) {
 					setUsername(response.data.user.username);
@@ -51,10 +52,28 @@ function Sidebar() {
 		};
 
 		fetchUserData();
+		gsap.from(sidebarRef.current.children, {
+			opacity: 0,
+
+			duration: 1,
+			delay: 0.3,
+			stagger: 0.4,
+			ease: "power3.inOut",
+		});
+		gsap.from(listRef.current.children, {
+			opacity: 0,
+			y: 60,
+			duration: 1,
+			delay: 0.4,
+			stagger: 0.5,
+			ease: "power4.out",
+		});
 	}, [router]);
 
 	return (
-		<div className="h-[100vh] p-2 gap-9 flex flex-col mr-2 justify-start items-start border-r-2 border-gray-600 pl-5 w-[20%]">
+		<div
+			ref={sidebarRef}
+			className="h-[100vh] p-2 gap-9 flex flex-col mr-2 justify-start items-start border-r-2 border-gray-600 pl-5 w-[20%]">
 			<div className="text-3xl flex w-full items-center justify-start gap-1 text-[#00ff00] font-bold">
 				<img
 					src="https://img.icons8.com/?size=100&id=85491&format=png&color=00ff00"
@@ -65,7 +84,7 @@ function Sidebar() {
 			</div>
 
 			<div>
-				<ul className="flex flex-col items-start gap-9">
+				<ul ref={listRef} className="flex flex-col items-start gap-9">
 					<a href="/user">
 						<li className="flex text-lg items-center hover:text-[#00ff40] gap-1">
 							<img
@@ -96,7 +115,7 @@ function Sidebar() {
 							Groups
 						</li>
 					</a>
-					<a href="#">
+					<a href="/user/aichat">
 						<li className="flex text-lg items-center hover:text-[#00ff40] gap-1">
 							<img
 								src="https://img.icons8.com/?size=100&id=RlMjBSnE5OAG&format=png&color=ffffff"
