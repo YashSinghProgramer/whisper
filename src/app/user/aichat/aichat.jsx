@@ -6,6 +6,7 @@ export default function AIChatUI() {
 	useEffect(() => {
 		const fetchdata = async () => {
 			const token = localStorage.getItem("token");
+
 			try {
 				const response = await axios.get(
 					"https://wishpringroom.onrender.com/profile",
