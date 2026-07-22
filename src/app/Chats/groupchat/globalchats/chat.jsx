@@ -82,7 +82,7 @@ function ChatApp() {
 	// --- SCREEN 1: Name Input Screen ---
 	if (!isJoined) {
 		return (
-			<div className="flex items-center justify-center min-h-screen bg-slate-900 text-white p-4">
+			<div className="flex items-center rounded-2xl  justify-center max-h-screen min-h-[95%] m-2 bg-slate-900 text-white p-4">
 				<div className="bg-slate-800 p-8 rounded-2xl shadow-2xl w-full max-w-md border border-slate-700">
 					<div className="flex justify-center mb-4">
 						<div className="p-3 bg-indigo-600 rounded-full">
@@ -91,7 +91,7 @@ function ChatApp() {
 					</div>
 					<h2 className="text-2xl font-bold text-center mb-2">Join the Chat</h2>
 					<p className="text-slate-400 text-center text-sm mb-6">
-						Apna naam daalo aur chat start karo
+						Don't use Real name for Global Chat
 					</p>
 
 					<form onSubmit={handleJoin} className="space-y-4">
@@ -121,7 +121,7 @@ function ChatApp() {
 
 	// --- SCREEN 2: Main Chat UI ---
 	return (
-		<div className="flex items-center justify-center min-h-screen bg-slate-900 p-2 sm:p-4">
+		<div className="flex items-center justify-center  m-2  p-2 sm:p-4">
 			<div className="flex flex-col h-[85vh] w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden">
 				{/* Header */}
 				<div className="bg-slate-900/80 backdrop-blur px-6 py-4 border-b border-slate-700 flex justify-between items-center">

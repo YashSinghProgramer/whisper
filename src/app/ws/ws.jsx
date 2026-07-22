@@ -2,8 +2,7 @@
 import { io } from "socket.io-client";
 
 function Connectws() {
-	return io("http://localhost:3600");
+	return io("https://wishpringroom-socket.onrender.com");
 }
 
 export default Connectws;
-	

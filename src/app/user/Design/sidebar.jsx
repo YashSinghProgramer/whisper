@@ -103,7 +103,7 @@ function Sidebar() {
 							Find Someone
 						</li>
 					</a>
-					<a href="#">
+					<a href="/Chats/groupchat">
 						<li className="flex text-lg items-center hover:text-[#00ff40] gap-1">
 							<img
 								src="https://img.icons8.com/?size=100&id=3734&format=png&color=ffffff"
