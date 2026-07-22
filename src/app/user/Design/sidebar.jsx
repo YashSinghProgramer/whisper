@@ -11,7 +11,6 @@ function Sidebar() {
 	const sidebarRef = useRef(null);
 	const listRef = useRef(null);
 	const logout = () => {
-		s;
 		localStorage.removeItem("token");
 	};
 
@@ -35,7 +34,6 @@ function Sidebar() {
 				);
 
 				// Console log karke dekhein response structure kya hai
-				
 
 				if (response.data && response.data.user) {
 					setUsername(response.data.user.username);
